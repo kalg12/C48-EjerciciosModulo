@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario con DOM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="contenedor">
+      <h1>Registro de estudiantes</h1>
+      <p>Completa los siguientes datos.</p>
+
+      <form id="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" placeholder="Escribe tu nombre" />
+          <small class="error" id="errorNombre"></small>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" placeholder="ejemplo@correo.com" />
+          <small class="error" id="errorCorreo"></small>
+        </div>
+
+        <div class="campo">
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" placeholder="Escribe tu edad" />
+          <small class="error" id="errorEdad"></small>
+        </div>
+
+        <div class="campo">
+          <label for="especialidad">Especialidad</label>
+
+          <select id="especialidad">
+            <option value="">Selecciona una opción</option>
+            <option value="Programación">Programación</option>
+            <option value="Administración">Administración</option>
+            <option value="Electrónica">Electrónica</option>
+            <option value="Mecánica">Mecánica</option>
+          </select>
+
+          <small class="error" id="errorEspecialidad"></small>
+        </div>
+
+        <button type="submit">Guardar información</button>
+      </form>
+
+      <section id="resultado" class="resultado oculto">
+        <h2>Información capturada</h2>
+
+        <p>
+          <strong>Nombre:</strong>
+          <span id="resultadoNombre"></span>
+        </p>
+
+        <p>
+          <strong>Correo:</strong>
+          <span id="resultadoCorreo"></span>
+        </p>
+
+        <p>
+          <strong>Edad:</strong>
+          <span id="resultadoEdad"></span>
+        </p>
+
+        <p>
+          <strong>Especialidad:</strong>
+          <span id="resultadoEspecialidad"></span>
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
